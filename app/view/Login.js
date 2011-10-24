@@ -2,6 +2,8 @@ Ext.define('MvcExample.view.Login', {
   extend: 'MvcExample.view.FormContainer',
   xtype: 'login',
   config: {
+    // These items will be placed BELOW the titlebar, which is
+    // inserted programmatically in MvcExample.view.FormContainer. 
     items: [
       {
         xtype: 'fieldset',
