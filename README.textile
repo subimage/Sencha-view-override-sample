@@ -1,0 +1,16 @@
+This is a sample Sencha Touch 2.x app demonstrating how to override controllers and views to encapsulate common UI patterns.
+
+While building a Sencha application I was finding myself repeating a lot of code for common UI views and event handler plumbing. I extracted this sample out of my application to demonstrate one way of staying DRY when dealing with this type of problem.
+
+The application is simple, and demonstrates 3 views.
+* Main screen
+* Login form
+* Registration form
+
+The login and registration forms inherit from other another view and controller to provide base functionality.
+
+The inherited view (MvcExample.view.FormContainer) automatically places a toolbar at the top with cancel/done buttons and a title, then assigns a known ID so we can reference this from our controller.
+
+The inherited controller (MvcExample.controller.FormContainerBase) wires up events for the created buttons, which we can then override in the child controller to perform custom events per screen.
+
+I hope someone finds this helpful.
